@@ -1,0 +1,61 @@
+<!--pages/myHomePage/myHomePage.wxml-->
+<view class='ry-page'>
+  <view class='ry-info-top cl'>
+    <image src='../../img/phbg.jpg'></image>
+    <view class="ry-img">
+      <open-data type="userAvatarUrl" class='tx'></open-data>
+    </view>
+    <view class='ry-name'>
+      <open-data type="userNickName" lang="zh_CN" class='name'></open-data>
+      <view><text>1423</text>人喜欢过</view>
+    </view>
+    <view class='ry-list'>
+      <navigator url="/pages/rankingList/rankingList">NO . <text>15</text></navigator>
+    </view>
+  </view>
+  <view class='jz-txt'>
+    “当生活变得千篇一律，与其墨守成规，不如做回自己。”
+  </view>
+  <view class='jz-zp'>
+    <image src='../../img/timg3.jpeg'></image>
+  </view>
+  <view class='jz-pl-ot'>
+    <view class='jz-share-ot cl'>
+      <button class='js-share'  open-type="share" plain="true">邀请好久pick我的桌面</button>
+      <view class='jz-z'>
+        <view>
+        <image wx:if="{{zan}}" bindtap="zan" src='../../img/zan.png'></image>
+        <image wx:else="{{meizan}}" bindtap="qxzan" src='../../img/zan2.png'></image>
+        </view>
+        <!-- <view><image src='../../img/pinglun.png'></image></view> -->
+      </view>
+    </view>
+  </view>
+  <view class='pl-input'>
+    <view class="section">
+      <textarea auto-height placeholder="快来告诉Ta" />
+    </view>
+    <button>确定</button>
+  </view>
+  <view class='pl-ot'>
+    <view class='pl-top-zan-ot cl'>
+      <view wx:for='' wx:key=''><text>name1</text>，</view>
+      <view><text>name1</text>，</view>
+      <view><text>name2</text>，</view>
+    </view>
+    <view class='pl-list-ot'>
+      <view class='pl-list cl'  wx:for='' wx:key=''>
+        <view>name1：</view>
+        <text>你桌面真是好看啊</text>
+      </view>
+      <view class='pl-list cl'>
+        <view>name2：</view>
+        <text>你桌面真是好看啊</text>
+      </view>
+      <view class='pl-list cl'>
+        <view>name3：</view>
+        <text>你桌面真,是好看啊  </text>
+      </view>
+    </view>
+  </view>
+</view>

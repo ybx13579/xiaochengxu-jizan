@@ -1,0 +1,143 @@
+/* pages/myHomePage/myHomePage.wxss */
+.ry-info-top{
+  background:#f2f2f2;
+  /* padding: 30rpx 0 30rpx 40rpx; */
+  box-sizing: border-box;
+  height: 350rpx;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.ry-info-top>image{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.ry-info-top>view{
+  position: relative;
+  z-index: 9;
+}
+.ry-info-top .ry-img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background:#f2f2f2;
+  overflow: hidden;
+  margin: 20rpx auto 20rpx;
+}
+.ry-info-top .tx{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.ry-name {
+  margin-bottom: 20rpx;
+}
+.ry-name .name{
+  color: #fff;
+  text-align: center;
+  display:block;
+  font-size:28rpx;
+  margin-top: 0rpx;
+}
+.ry-name view{
+  color: #d3dadf;
+  font-size:24rpx;
+}
+.ry-list{
+  color: #fff;
+  font-size:24rpx;
+  padding: 10rpx 120rpx 0;
+  box-sizing: border-box;
+}
+.ry-list>view{
+  display: inline-block;
+  width: 50%;
+}
+.ry-list text{
+  font-size: 28rpx;
+}
+.ry-list .like-num image{
+  width: 40rpx;
+  height: 40rpx;
+}
+/*排名*/
+.ph-ot{
+  box-sizing: border-box;
+  background: #fff;
+}
+.ph-in{
+  width: 100%;
+  height: 100%;
+  min-height: 600rpx;
+  background: #fff;
+  box-sizing: border-box;
+}
+.ph-tip{
+  padding: 20rpx 30rpx;
+  color: #aaa;
+  font-size: 24rpx;
+  /* border-bottom: 1px solid #f2f2f2; */
+  background: #f2f2f2;
+}
+.ph-tip>view{
+  float: left;
+}
+.ph-tip .ph-all-number{
+  float: right;
+}
+.ph-list-ot{
+  background: #fff;
+}
+.ph-list-ot .ph-list{
+  width:100%;
+  height: 140rpx;
+  font-size: 24rpx;
+  color: #333;
+  border-bottom: 1px dashed #eee;
+}
+.ph-list-in{
+  width: 100%;
+  height: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.ph-list>view{
+  box-sizing: border-box;
+}
+.phb-idx{
+  float:left;
+  font-size:40rpx;
+  padding-top: 40rpx;
+  color: #a5a5a5;
+  margin-right: 60rpx;
+  font-weight: normal;
+}
+.phb-tx{
+  float:left;
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  overflow: hidden; 
+  margin-top: 20rpx;
+}
+.phb-tx image{
+  width: 100%;
+  height: 100%;
+}
+.phb-name{
+  float:left;
+  width:350rpx;
+  font-size:28rpx;
+  padding-top: 50rpx;
+  color: #666;
+}
+.ph-list .phb-number{
+  float: right;
+  font-size:28rpx;
+  padding-top: 50rpx;
+  color: #99aaff;
+}

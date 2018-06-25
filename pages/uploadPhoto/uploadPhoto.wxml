@@ -1,0 +1,90 @@
+<!--pages/uploadPhoto/uploadPhoto.wxml-->
+<view class='ry-page' style="min-height:{{bodyHeight}}px">
+  <view class='cont'>
+    <view class="ry-steps-ot"><!-- class="active"时吸顶-->
+      <view class='top-btn-group weui-flex'>
+        <!-- <view class="{{selected?'active':'default'}} weui-flex__item" bindtap="selected" data-opt="ruleImg-ot">
+          <text class='txt '>活动\n详情</text>
+          <view class='icon'>》</view>
+        </view>
+        <view class="{{selected1?'active':'default'}} weui-flex__item" bindtap="selected1" data-opt="strategy-ot">
+        <text class='txt'>凹造型\n攻略</text>
+          <view class='icon'>》</view>
+        </view> -->
+          <view class="weui-flex__item">
+          <navigator class='txt' url="/pages/activeDetails/activeDetails"><text>活动\n详情</text></navigator>
+          <view class='icon'>》</view>
+        </view>
+        <view class="weui-flex__item">
+          <navigator class='txt' url="/pages/activeDetails/activeDetails"><text>凹造型\n攻略</text></navigator>
+          <view class='icon'>》</view>
+        </view> 
+        <view class="weui-flex__item active">
+          <navigator class='txt' url="/pages/uploadPhoto/uploadPhoto"><text>上传\n硬照</text></navigator>
+          <view class='icon'>》</view>
+        </view>
+        <view class="weui-flex__item">
+            <navigator class='txt last' url="/pages/myHomePage/myHomePage">完成</navigator>
+          <!-- <text class='txt last'>完成</text> -->
+        </view>
+      </view>
+    </view>
+    
+  </view>
+
+  <view class='cont'>
+    <view class="gallery">
+        <view class="button-upload-ot">
+            <image src="../../img/camera.png" class="button-upload" bindtap="showCJBox" />
+        </view>
+        <view class='hc-img-ot'> 
+          <view class='bigImgCanvas-ot'>
+            <canvas class='bigImgCanvas' canvas-id="bigImgCanvas" />
+             <image src="{{CJImgFinishSrc}}" /> 
+          </view>
+          <view class=''>
+            <view class='hct-ot'>
+              <view class='img-big-ot'  bindtap='handlePoster'>
+                <image class='img-big' src="{{bigImg}}" data-src="{{bigImg}}" /> 
+                <image class='img-small' src="{{smallImg}}" /> 
+                <!-- <view class="txt-tit">邀请卡</view> -->
+              </view>
+            </view>
+            <view class="hct-tip-txt">↑ 点击查看大图，长按大图可保存或转发图片</view>
+            <view class='hct-list-ot'>
+              <scroll-view class="scroll-view_H" scroll-x>
+                <view class="scroll-view-item_H {{changeBgActive==index?'active':''}}" wx:key="" wx:for="{{imgBgList}}"   data-index="{{index}}" bindtap='changeBg' >
+                  <image class='img-big' src="{{item}}" />
+                </view>
+              </scroll-view>
+              <view class="right-icon">》</view>
+            </view>
+            <!-- <view bindtap='handlePoster'>绘制图片</view> -->
+          </view>
+        </view>
+    </view>
+  </view>
+</view>
+<view class="cjImg-ot {{showCJBox?'active':'active2'}}" >
+  <view class='cjImg-in'  style="height:{{bodyHeight}}px">
+    <import src="../we-cropper/we-cropper.wxml"/>
+    <view class="cropper-wrapper">
+        <template is="we-cropper" data="{{...cropperOpt}}"/>
+        <view class="cropper-buttons">
+            <view
+                    class="upload"
+                    bindtap="uploadTap">
+                选择图片
+            </view>
+            <view
+                    class="getCropperImage"
+                    bindtap="getCropperImage">
+                确认选择
+            </view>
+        </view>
+    </view>
+  </view>
+</view>
+
+
+

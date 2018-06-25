@@ -1,0 +1,161 @@
+/* pages/myHomePage/myHomePage.wxss */
+.ry-info-top{
+  background:#f2f2f2;
+  /* padding: 30rpx 0 30rpx 40rpx; */
+  box-sizing: border-box;
+  height: 180rpx;
+  overflow: hidden;
+  position: relative;
+}
+.ry-info-top>image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.ry-info-top>view{
+  position: relative;
+  z-index: 9;
+}
+.ry-info-top .ry-img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background:#f2f2f2;
+  overflow: hidden;
+  float: left;
+  margin: 30rpx 30rpx 0 40rpx;
+}
+.ry-info-top .tx{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ry-name{
+  float: left;
+  margin-top: 30rpx;
+}
+.ry-name .name{
+  color: #fff;
+  text-align: left;
+  display:block;
+  font-size:28rpx;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+.ry-name view{
+  color: #d3dadf;
+  font-size:24rpx;
+}
+.ry-list{
+  float: right;
+  color: #fff;
+  font-size:36rpx;
+  font-weight: bold;
+  padding-top: 30rpx;
+  padding-right: 50rpx;
+  box-sizing: border-box;
+}
+.ry-list text{
+  font-size: 70rpx;
+}
+.jz-txt{
+  padding:30rpx  40rpx;
+  font-size: 26rpx;
+  /* background: #f2f2f2; */
+  background:#fff;
+  margin:20rpx 0;
+}
+/*集赞照片*/
+.jz-zp {
+  padding: 40rpx;
+  background: #fff;
+  box-sizing: border-box;
+}
+.jz-zp image{
+  width: 100%;
+}
+/*集赞评论*/
+.jz-pl-ot{
+  background: #fff;
+  padding: 0 40rpx;
+}
+.jz-share-ot .js-share{
+  float: left;
+  color: #459ad0;
+  font-size: 26rpx;
+  line-height: 36rpx;
+  padding: 0;
+  border: 0;
+}
+.jz-share-ot .jz-z{
+  float: right;
+}
+.jz-z>view{
+  float: left;
+  margin-left: 30rpx;
+}
+.jz-z>view image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.pl-ot{
+  color: #666;
+  padding: 40rpx 40rpx;
+  background: #fff;
+}
+.pl-top-zan-ot{
+  color: #459ad0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30rpx;
+  background: #f2f2f2;
+  padding:20rpx 40rpx;
+  box-sizing: border-box;
+}
+.pl-top-zan-ot>view{
+  float: left;
+  margin: 0 10rpx 0 0;
+}
+.pl-list-ot{
+  background: #f2f2f2;
+  padding:20rpx 40rpx;
+  box-sizing: border-box;
+}
+.pl-list-ot .pl-list{
+  margin-bottom: 20rpx;
+}
+.pl-list-ot .pl-list >view{
+  float: left;
+  color: #459ad0;
+}
+.pl-list-ot .pl-list >text{
+  float: left;
+}
+.pl-input{
+  padding: 0 40rpx;
+  background: #fff;
+}
+.pl-input .section{
+  border: 1px solid #eee;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx; 
+}
+.pl-input textarea{
+  font-size: 24rpx;
+}
+.pl-input button{
+  width: 100rpx;
+  float: right;
+  color: #fff;
+  background: #8b8fbe;
+  font-size: 24rpx;
+  padding:  0;
+  text-align: center;
+  margin: 10rpx 0;
+}
+
+
+
+
+

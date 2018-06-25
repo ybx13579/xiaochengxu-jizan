@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/activeDetails/activeDetails",
+    "pages/myHomePage/myHomePage",
+    "pages/uploadPhoto/uploadPhoto",
+    "pages/otherHomePage/otherHomePage",
+    "pages/rankingList/rankingList",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3a8fb7",
+    "navigationBarTitleText": "容言",
+    "navigationBarTextStyle": "#fff"
+  }
+}

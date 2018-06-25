@@ -1,0 +1,62 @@
+
+<scroll-view  scroll-into-view="{{toView}}"  scroll-y="true"   scroll-with-animation="true" class='scr' style="height:{{bodyHeight}}px"  bindscroll="scroll">
+  <view class="ry-page">
+      <view class="cont ry-act-top">
+          <image class='publicityImg' src='../../img/timg.jpeg'></image>
+          <view class="ry-steps-ot {{scroll_height>'210'?'active':'active2'}}"><!-- class="active"时吸顶-->
+            <view class='top-btn-group weui-flex'>
+              <view class="{{selected?'active':'default'}} weui-flex__item" bindtap="selected" data-opt="ruleImg-ot">
+                <text class='txt '>活动\n详情</text>
+                <view class='icon'>》</view>
+              </view>
+              <view class="{{selected1?'active':'default'}} weui-flex__item" bindtap="selected1" data-opt="strategy-ot">
+              <text class='txt'>凹造型\n攻略</text>
+                <view class='icon'>》</view>
+              </view>
+              <!-- <view class="weui-flex__item">
+                <text class='txt active'>活动\n详情</text>
+                <view class='icon'>》</view>
+              </view>
+              <view class="weui-flex__item">
+                <text class='txt'>凹造型\n攻略</text>
+                <view class='icon'>》</view>
+              </view> -->
+              <view class="weui-flex__item">
+                <navigator class='txt' url="/pages/uploadPhoto/uploadPhoto"><text>上传\n硬照</text></navigator>
+                <view class='icon'>》</view>
+              </view>
+              <view class="weui-flex__item">
+                <!-- <navigator class='txt last' url="/pages/rankingList/rankingList">完成</navigator> -->
+                <text class='txt last'>完成</text>
+              </view>
+            </view>
+          </view>
+          
+            <navigator class='gotoRL-btn' url="/pages/rankingList/rankingList">查看当前排行榜  ></navigator>
+      </view>
+      <view class='cont ruleImg-ot' id="ruleImg-ot">
+          <image class='ruleImg' src='../../img/timg2.jpeg'></image>
+      </view>
+      <view class='cont strategy-ot' id="strategy-ot">
+          <text class='top-tit'>文案编辑，引出公众号中的攻略文章</text>
+          <view class='btm-con cl'>
+            <view>
+              <image class='publicityImg' src='../../img/timg3.jpeg'></image>
+            </view> 
+            <view class='xd'>
+              <text class=''>案例主人</text> 
+              <view>微信小程序是一种全新的连接用户与服务的方式，它可以在微信内被便捷地获取和传播。</view>
+            </view>
+          </view>
+          <view class='gotoGzh'>
+            <view>
+              容言凹造型之 <text class='gutoGzh-btn'>如何拍出最in的桌面</text> 
+            </view>
+          </view>
+          <view>
+            <button class="weui-btn">先去看看攻略</button>
+            <navigator class='gotoSC-btn' url="/pages/uploadPhoto/uploadPhoto">不看攻略啦</navigator>
+          </view>
+      </view>
+  </view>
+</scroll-view>

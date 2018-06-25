@@ -1,0 +1,35 @@
+<!--pages/myHomePage/myHomePage.wxml-->
+<view class='ry-page'>
+  <view class='ry-info-top cl'>
+    <image src='../../img/phbg.jpg'></image>
+    <view class="ry-img">
+      <navigator url="/pages/myHomePage/myHomePage"><open-data type="userAvatarUrl" class='tx'></open-data></navigator>
+    </view>
+    <view class='ry-name'>
+      <open-data type="userNickName" lang="zh_CN" class='name'></open-data>
+    </view>
+    <view class='ry-list'>
+      <view class="like-num"><view><image src="../../img/zan2.png"></image></view><text>1423</text></view>
+      <view class="grade-num"><navigator url="/pages/rankingList/rankingList"><view>排名</view><text>15</text></navigator></view> 
+    </view>
+  </view>
+  <view class='ph-ot'>
+    <view class='ph-in'>
+      <view class='ph-tip cl'>
+        <view>截止当前的排名统计</view>
+        <view class='ph-all-number'>参与人数：<text>593</text></view>
+      </view>
+      <view class='ph-list-ot'>
+        <view class='ph-list cl' wx:key='{{item}}' wx:for="{{phbList}}" data-index="{{index}}">
+          <navigator class='ph-list-in cl' url="/pages/otherHomePage/otherHomePage">
+            <view class='phb-idx'>No.{{index+1}}</view>
+            <view class='phb-tx'><image src='{{item.src}}'></image></view>
+            <view class='phb-name'>{{item.name}}</view>
+            <view class='phb-number'>{{item.numb}}</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+</view>

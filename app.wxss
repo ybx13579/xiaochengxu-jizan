@@ -1,0 +1,60 @@
+/**app.wxss**/
+ @import 'weui.wxss'; 
+
+/*radio样式修改*/
+radio .wx-radio-input{
+  width: 30rpx;
+  height: 30rpx;
+}
+radio .wx-radio-input.wx-radio-input-checked{
+  border-color: #3a8fb7!important;
+  background-color: #3a8fb7!important;
+}
+radio .wx-radio-input.wx-radio-input-checked::before{
+  width:30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #3a8fb7;
+  background: transparent;
+}
+.cl:after{ 
+  display:block; 
+  clear:both; 
+  content:""; 
+  visibility:hidden; 
+  height:0; 
+} 
+.cl{zoom:1} .cl{clear: both;}
+/*  重置样式  */
+body,html{height:100%}
+view {
+  font-weight:normal;
+}
+button{
+  background: #3a8fb7;
+  color: #fff;
+  font-size: 30rpx;
+}
+button.button-hover{
+  background: #317899;
+  color: #fff;
+  font-size: 30rpx;
+}
+.ry-page{
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2!important;
+  color: #333;
+  font-size: 28rpx;
+}
+.ry-page>view.cont{
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  background: #ffffff;
+  margin-bottom: 20rpx;
+}
+.ry-page>view.cont:last-child{
+  margin-bottom: 0;
+}
