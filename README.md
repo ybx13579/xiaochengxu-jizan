@@ -6,8 +6,9 @@
 
 ## 效果图：
 <img src="show/s1.png" />
-<img src="show/s2.png" />
 <img src="show/s3.png" />
+<img src="show/s2.png" />
 <img src="show/s4.png" />
 <img src="show/s5.png" />
-> PS:图片为网上素材，如有侵权问题可联系我删除
+
+| PS:部分图片为网上素材，如有侵权问题可联系我删除
