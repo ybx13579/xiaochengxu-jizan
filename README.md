@@ -1,5 +1,5 @@
 # xiaochengxu-jizan
-公司做的一个有裁切图片、上传照片、点赞、生成图片、排行榜等功能的小程序前端源码
+公司项目做的一个有裁切图片、上传照片、点赞、生成图片、排行榜等功能的完整小程序前端源码
 ## Tip:
 部分整理文档参考：https://blog.csdn.net/YangBingX/article/details/80498851
 
