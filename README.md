@@ -3,6 +3,7 @@
 ## Tip:
 - 部分整理文档参考：https://blog.csdn.net/YangBingX/article/details/80498851
 - 生成图片我这里是自己写的代码，推荐使用Painter：https://github.com/Kujiale-Mobile/Painter
+- 单张图片上传地址：https://blog.csdn.net/YangBingX/article/details/80929404#t1
 
 
 ## 效果图：
