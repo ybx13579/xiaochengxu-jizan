@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>生成图片</title>
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/ry.css">
+</head>
+<body class="white-bg">
+<div class="page ry-page-ot">
+    <div class="page__bd ry-doc-bd">
+        <div class="my-info-top-ot cl">
+            <div class="my-info-tx-ot">
+                <img src="img/zhichi.jpg" alt="">
+            </div>
+            <div class="my-info-name-ot">
+                <div class="my-info-name">
+                    嘿哈
+                </div>
+                <div class="my-info-up-num">
+                    <span>57</span>人喜欢过
+                </div>
+            </div>
+            <div class="my-info-phb-num">
+                <a href="rankingList.html">NO.&nbsp;<span>21</span></a>
+            </div>
+        </div>
+        <div class="my-top-txt">
+            "桌面就是第二修养"
+        </div>
+        <div class="show-group-ot">
+            <div class="show-img-ot">
+                <img src="img/timg3.jpeg" alt="">
+            </div>
+        </div>
+        <div class="show-function-ot cl">
+            <div class="show-share-btn">邀请好友pick我的桌面</div>
+            <div class="show-zan"></div><!-- class="active" 为点亮红心-->
+        </div>
+        <div class="ry-pl-ot">
+            <div class="ry-pl-input cl">
+                <textarea class="weui-textarea" placeholder="快来评价Ta~" rows="1"></textarea>
+                <a href="javascript:;" class="">确定</a>
+            </div>
+            <div class="zan-people-ot">
+                <dl class="cl">
+                    <dt><img src="img/zan2.png" alt=""></dt>
+                    <dd><a href="otherHome.html">nickname1</a><i>,</i></dd>
+                    <dd><a href="otherHome.html">天涯明月刀</a><i>,</i></dd>
+                    <dd><a href="otherHome.html">皮卡丘</a><i>,</i></dd>
+                    <dd><a href="otherHome.html">皢</a><i>,</i></dd>
+                </dl>
+            </div>
+            <div class="pl-people-ot">
+                <ul>
+                    <li>
+                        <div class="userName"><a href="otherHome.html">nick name1</a>:</div>
+                        <div class="msgInfo">增加了输入字符功能，英文/半角为半个字符，汉字/全角为一个字符。</div>
+                    </li>
+                    <li>
+                        <div class="userName"><a href="otherHome.html">快到碗里来</a>:</div>
+                        <div class="msgInfo">嗯嗯嗯。</div>
+                    </li>
+                    <li>
+                        <div class="userName"><a href="otherHome.html">好好学习，天天向上</a>:</div>
+                        <div class="msgInfo">滑动。</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="weui-footer">
+        <div class="ry-txt-ot">
+            <p class="ry-footer-logo cl">
+                <img src="img/logo90.png" alt="">
+                <span>容言 ©</span>
+            </p>
+            <p class="weui-footer__text">还可以找顾问了解更多的料哦</p>
+        </div>
+
+    </div>
+</div>
+<a href="javascript:;" class="weui-btn weui-btn_default" id="showIOSDialog2">iOS Dialog样式二</a>
+<div id="dialogs">
+    <div class="js_dialog" id="iosDialog2" style="display: none;">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+            <div class="weui-dialog__bd">
+                <div>哇哦~你是给Ta点赞的第<span>8</span>位好友</div>
+                <p class="otherHome-tip-p">如果Ta是排行榜Top10,你将获取...</p>
+            </div>
+            <div class="weui-dialog__ft">
+                <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">知道了</a>
+                <a href="index.html#huodongguize"  class="weui-dialog__btn weui-dialog__btn_primary">查看获奖规则</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ry-block-sidebar">
+    <div class="block-sidebar-item-user "><a href="myHome.html"></a></div>
+    <div class="block-sidebar-item-play "><a href="index.html">我要<br/>参加</a></div>
+</div>
+</body>
+</html>
+<script src="lib/jquery-2.1.4-min.js"></script>
+<script>
+
+    $(function(){
+
+        //
+        //点亮红心
+        var zanFlag = 0;
+        $('.show-zan').on('click', function(){
+            var $this = $(this);
+            if(zanFlag==0){
+                $this.addClass("active");
+                zanFlag=1;
+
+            }else {
+                $this.removeClass("active");
+                zanFlag=0;
+            }
+        });
+        //第几位好友点赞提示
+        var $iosDialog2 = $('#iosDialog2')
+
+        $('#dialogs').on('click', '.weui-dialog__btn', function(){
+            $(this).parents('.js_dialog').fadeOut(200);
+        });
+
+        $('#showIOSDialog2').on('click', function(){
+            $iosDialog2.fadeIn(200);
+        });
+    });
+</script>

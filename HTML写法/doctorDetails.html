@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>背景切换</title>
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <!--<link rel="stylesheet" href="lib/swiper/swiper-3.4.2.min.css">-->
+    <!--<link rel="stylesheet" href="css/ry.css">-->
+    <style>
+
+        img{
+            display: inline-block;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <div class="page__bd page__bd_spacing">
+        <a href="javascript:;" class="weui-btn weui-btn_default" id="openSystemCameraBtn">点击这里拍照或者选择照片</a>
+    </div>
+    <!--BEGIN actionSheet-->
+    <div>
+        <div class="weui-mask" id="iosMask" style="display: none"></div>
+        <div class="weui-actionsheet" id="iosActionsheet">
+            <div class="weui-actionsheet__menu">
+                <div class="weui-actionsheet__cell"><input type="file" capture="camera"  accept="image/image/jpeg,image/jpg,image/png" id="btn_camera" name="cameraInput"/>相机</div>
+                <div class="weui-actionsheet__cell"><input type="file" accept="image/image/jpeg,image/jpg,image/png" id="btn_photo" name="cameraInput"/>相册</div>
+            </div>
+            <div class="weui-actionsheet__action">
+                <div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+            </div>
+        </div>
+    </div>
+
+    <img id="image"  />
+</div>
+<script src="lib/jquery-2.1.4-min.js"></script>
+<script type="text/javascript">
+    // ios
+    $(function(){
+        var $iosActionsheet = $('#iosActionsheet');
+        var $iosMask = $('#iosMask');
+
+        function hideActionSheet() {
+            $iosActionsheet.removeClass('weui-actionsheet_toggle');
+            $iosMask.fadeOut(200);
+        }
+        //点取消或者点击其他地方隐藏下菜单
+        $iosMask.on('click', hideActionSheet);
+        $('#iosActionsheetCancel').on('click', hideActionSheet);
+        //相机按钮点击时
+        $("#openSystemCameraBtn").on("click", function(){
+            $iosActionsheet.addClass('weui-actionsheet_toggle');
+            $iosMask.fadeIn(200);
+        });
+        //相机
+        $("#btn_camera").on("change",function () {
+            var file = document.getElementById("btn_camera").files[0];
+            var reader = new FileReader();
+            reader.onload=function(e) {
+                document.getElementById("image").src = e.target.result;
+                hideActionSheet();
+            };
+            reader.readAsDataURL(file);
+        });
+        //相册
+        $("#btn_photo").on("change",function () {
+            var file = document.getElementById("btn_photo").files[0];
+            var reader = new FileReader();
+            reader.onload=function(e) {
+                $("#image").attr("src",e.target.result) ;
+                hideActionSheet();
+            };
+            reader.readAsDataURL(file);
+        })
+    });
+    </script>
+
+</body>
+</html>

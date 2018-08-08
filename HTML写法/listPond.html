@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>池子</title>
+    <link rel="stylesheet" href="lib/swiper/swiper.min.css">
+    <link rel="stylesheet" href="css/ry.css">
+    <style>
+        html,body,.swiper-container{
+            height:100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body class="white-bg">
+<div style="height:100%;">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide ry-swiper-cai">
+                <div class="swiper-info-ot">
+                    <img src="img/buzhichi.jpg" alt="">
+                    <p>我感jio你还需努力</p>
+                </div>
+            </div>
+            <div class="swiper-slide ry-swiper-center">
+                <a href="myHome.html">
+                    <div class="swiper-info-ot">
+                        <div class="info-ot cl">
+                            <img src="img/tx.jpeg" alt="">
+                            <p>丸子name</p>
+                        </div>
+                        <img src="img/timg3.jpeg" >
+                        <p class="p-number">支持↑<span>98</span>%</p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide ry-swiper-ding">
+                <div class="swiper-info-ot">
+                    <p>我 我 我支持这位大兄Dei</p>
+                    <img src="img/zhichi.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="lib/jquery-2.1.4-min.js"></script>
+<script src="lib/swiper/swiper.min.js"></script><script type = "text/javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        initialSlide :1,//默认显示第二个
+        touchRatio : 2.5,//控制拖动距离比例
+        shortSwipes : false,//设置为false时，只能长切换，进行快速且短距离的滑动无法触发切换。
+        on:{
+            //滑动的时候判断是上划还是下划
+            touchStart:function () {
+                $(".ry-swiper-cai div").show();//完成后显示回来两个图片
+                $(".ry-swiper-ding div").show();//完成后显示回来两个图片
+            },
+            touchEnd: function(){
+                var that = this;
+//                console.log(that);
+                var idx = that.snapIndex;
+                //判断是上一张还是下一张
+                //这是上一张 我踩下去了
+                if(idx<1){
+                    console.log("这是上一张 我踩下去了");
+                    $(".ry-swiper-cai div").fadeOut(500);
+                    chooseSwiperCard();
+                }
+                //这是下一张 我支持你
+                if(idx>1){
+                    console.log("这是下一张 我支持你");
+                    $(".ry-swiper-ding div").fadeOut(500);
+                    chooseSwiperCard();
+                }
+            }
+        }
+    });
+    //这里随机切换卡片内容
+    function chooseSwiperCard(){
+        setTimeout(function () {
+            $(".swiper-wrapper .ry-swiper-center img").attr("src","img/tx.jpeg");
+            mySwiper.slideTo(1, 10, false);//切换到第一个slide，速度为10ms
+        },500);
+    }
+</script>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>活动首页</title>
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/ry.css">
+</head>
+<body>
+
+<div class="page ry-page-ot">
+    <div class="page__bd ">
+        <div class="page-ry-con act-dh-ot">
+            <div class="act-top-img"><!--16:9图片-->
+                <img src="img/timg.jpeg" alt="">
+            </div>
+            <div class="act-top-menu "><!--class="active" 时 导航吸顶-->
+                <ul class="cl">
+                    <li class="act-menu active">
+                        <a href="#huodongguize">
+                            <div>
+                                <p>活动<br />详情</p>
+                                <i>》</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="act-menu">
+                        <a href="#aozaoxinggonglue">
+                            <div>
+                                <p>凹造型<br />攻略</p>
+                                <i>》</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="act-menu">
+                        <a href="uploadPhoto.html">
+                            <div>
+                                <p>上传<br />硬照</p>
+                                <i>》</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <div>
+                            <p>完成</p>
+                            <!--<i>》</i>-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="act-top-linkList">
+                <a href="rankingList.html" > 查看当前排行榜 > </a>
+            </div>
+        </div>
+        <div class="page-ry-con act-gz-ot">
+            <a class="ry-maodian" href="javascript:;" name="huodongguize"></a>
+            <img src="img/timg2.jpeg" alt="">
+        </div>
+        <div class="page-ry-con act-azx-ot">
+            <a class="ry-maodian" href="javascript:;" name="aozaoxinggonglue"></a>
+            <div class="azx-top">
+                文案编辑，引出公众号中的攻略文章
+            </div>
+            <div class="azx-center cl">
+                <div class="azx-left">
+                    <img src="img/timg3.jpeg" alt="">
+                </div>
+                <div class="azx-right">
+                    <p>案例的主人</p>
+                    <div>开发小程序的第一步，你需要拥有一个小程序帐号，通过这个帐号你就可以管理你的小程序</div>
+                </div>
+            </div>
+            <div class="azx-btm">
+                <p>容言凹造型攻略之<a href="javascript:;">如何拍出最in的桌面</a></p>
+            </div>
+            <div class="azx-btn">
+                <div class="azx-btn-in">
+                    <a class="gotoGZH" href="javasctipt:;">先去看看攻略</a>
+                </div>
+                <p><a class="notoGL" href="uploadPhoto.html">不看攻略啦</a></p>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--<div class="weui-footer">-->
+        <!--<div class="ry-txt-ot">-->
+            <!--<p class="ry-footer-logo cl">-->
+                <!--<img src="img/logo90.png" alt="">-->
+                <!--<span>容言 ©</span>-->
+            <!--</p>-->
+            <!--<p class="weui-footer__text">还可以找顾问了解更多的料哦</p>-->
+        <!--</div>-->
+
+    <!--</div>-->
+</div>
+
+</body>
+</html>
+<script src="lib/jquery-2.1.4-min.js"></script>
+<script>
+
+    $(function(){
+
+        //导航点击切换高亮
+        $('.act-top-menu li.act-menu div').on('click', function(){
+            var idx = $('.act-top-menu li.act-menu div').index(this);
+            $(".act-top-menu li ").removeClass("active");
+            $('.act-top-menu li.act-menu').eq(idx).addClass("active");
+        });
+
+    });
+    $(window).scroll(function(){
+        var winScoTop = $(document).scrollTop();
+        var scHei  = $(".act-top-img").height();//第一部分顶部图片的高度
+        var dhHei  = $(".act-dh-ot").height();//第一部分整个块的高度
+        var gzHei  = $(".act-gz-ot").height();//第二部分整个块的高度
+
+        //判断屏幕滚动距离 导航吸顶效果
+        if(winScoTop>=scHei){
+            $(".act-top-menu ").addClass("active");
+        }else{
+            $(".act-top-menu ").removeClass("active");
+        }
+        //判断屏幕滚动距离  动态切换导航的高亮
+        if(winScoTop<scHei){
+            $(".act-top-menu li ").removeClass("active");
+            $('.act-top-menu li.act-menu').eq(0).addClass("active");
+        }
+        if(winScoTop>=scHei){
+            $(".act-top-menu li ").removeClass("active");
+            $('.act-top-menu li.act-menu').eq(0).addClass("active");
+        }
+        if(winScoTop>=dhHei+gzHei/2){
+            $(".act-top-menu li ").removeClass("active");
+            $('.act-top-menu li.act-menu').eq(1).addClass("active");
+        }
+    })
+</script>
