@@ -17,6 +17,6 @@
 <img src="show/s5.png" />
 
 ## HTML版的新增swiper效果图
-<img src="123.gif" />
+<img src="show/123.gif" />
 
 | PS:部分图片为网上素材，如有侵权问题可联系我删除
